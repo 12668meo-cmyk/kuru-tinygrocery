@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cái Tiệm Tạp Hoá 🌸</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Comfortaa:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   🌷 MÀU SẮC
+===================================================== */
+:root{
+    --pink-bg:#fff0f5;
+    --pink-main:#ffd3df;
+    --pink-card:#f7d7e0;
+    --pink-soft:#ffe9ee;
+
+    --brown:#76574d;
+    --brown-light:#b89587;
+    --brown-border:#c19b8d;
+
+    --cream:#fff9f3;
+    --white:#ffffff;
+
+    /* 🌿 XANH NHẸ */
+    --leaf:#9ab8a2;
+    --leaf-soft:#c4d8c8;
+    --leaf-dark:#73957d;
+}
+
+/* =====================================================
+   🌸 CƠ BẢN
+===================================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    padding-top:270px;
+    padding-bottom:60px;
+    overflow-x:hidden;
+    position:relative;
+    color:var(--brown);
+    font-family:'Comfortaa', cursive;
+    background-color:var(--pink-bg);
+    background-image: radial-gradient(rgba(255,255,255,.8) 2px, transparent 3px);
+    background-size:34px 34px;
+}
+
+/* =====================================================
+   🖤🌹 DARK MODE
+===================================================== */
+body.dark-mode{
+    --pink-bg:#160b0e;
+    --pink-main:#32151b;
+    --pink-card:#3b171e;
+    --pink-soft:#51212b;
+    --brown:#f1d4d8;
+    --brown-light:#c49aa2;
+    --brown-border:#7d424d;
+    --cream:#241114;
+    --white:#fff4f5;
+    --leaf:#6e4b50;
+    --leaf-soft:#8b5a63;
+    --leaf-dark:#47262d;
+    background-color:#160b0e;
+    background-image: radial-gradient(rgba(255,220,225,.08) 2px, transparent 3px);
+}
+
+body.dark-mode header{
+    background: linear-gradient(180deg, #32151b 0%, #271015 65%, #1d0d11 100%);
+    box-shadow: 0 5px 20px rgba(0,0,0,.4);
+}
+
+body.dark-mode .cloud{ opacity:.25; }
+body.dark-mode .petal{ color:#d77c8e; }
+body.dark-mode .lamp-wire, body.dark-mode .lamp-hook{ background:#d4a3a9; }
+body.dark-mode .lamp-shade{ background: linear-gradient(145deg, #5b3034, #291316); border-color:#9b6069; }
+body.dark-mode .lamp-trim{ background:#9b6069; }
+body.dark-mode .shop-title{ color:#f5d9dd; text-shadow: 0 3px 0 #4b2028, 0 5px 12px rgba(0,0,0,.35); }
+body.dark-mode .shop-title::after{ background:#8d4353; opacity:.5; }
+body.dark-mode .title-area::before{ background: radial-gradient(ellipse, rgba(255,220,225,.15) 0%, rgba(110,35,48,.25) 48%, transparent 73%); }
+body.dark-mode .title-area::after{ color:#c98491; border-color: rgba(207,139,151,.5); }
+body.dark-mode .title-bow{ color:#d98799; }
+body.dark-mode .pearl{ color:#f4d9dd; }
+body.dark-mode .signboard{ background: rgba(52,22,28,.85); border-color:#874552; color:#edc8ce; box-shadow: 0 3px 10px rgba(0,0,0,.25), inset 0 0 0 2px rgba(255,255,255,.08); }
+body.dark-mode .signboard::before, body.dark-mode .signboard::after{ background:#b75d70; box-shadow: 0 0 0 2px #32151b; }
+body.dark-mode .title-decoration{ color:#c87989; }
+body.dark-mode .title-decoration span:nth-child(2){ color:#e09aaa; }
+body.dark-mode .header-lace{ background: linear-gradient(to bottom, transparent 0 35%, rgba(210,135,148,.45) 36% 43%, transparent 44%); }
+body.dark-mode .header-lace::before{ background: radial-gradient(circle at 50% 0, #7f3e4b 7px, transparent 8px); }
+body.dark-mode .header-lace::after{ background:#6f303d; }
+body.dark-mode .tool-button{ background:#32151b; border-color: rgba(239,207,212,.7); color:#f3d8dc; box-shadow: 0 3px 9px rgba(0,0,0,.35); }
+body.dark-mode .tool-button:hover{ background:#54202b; }
+body.dark-mode .shelf{ background: linear-gradient(145deg, #512b2f, #35191d); border-color:#703d46; box-shadow: inset 0 0 0 3px rgba(255,255,255,.07), 0 7px 0 #251014, 0 14px 24px rgba(0,0,0,.4); }
+body.dark-mode .shelf::before{ border-color: rgba(174,82,99,.55); }
+body.dark-mode .shelf::after{ border-color: rgba(52,22,28,.9); }
+body.dark-mode .shelf-mark{ color:#e4aab3; }
+body.dark-mode .bot-card{ background: linear-gradient(145deg, #51232c, #3b171e); border-color:#814653; box-shadow: inset 0 0 0 3px rgba(255,255,255,.07), 0 5px 12px rgba(0,0,0,.35); }
+body.dark-mode .bot-card:hover{ box-shadow: inset 0 0 0 3px rgba(255,255,255,.1), 0 9px 18px rgba(0,0,0,.45); }
+body.dark-mode .bot-image{ background:#2a1216; border-color:#85505a; color:#c69ba2; }
+body.dark-mode .bot-name{ color:#f0d3d8; }
+body.dark-mode .review{ border-color: rgba(240,205,211,.2); }
+body.dark-mode .review-title{ color:#d6a5ad; }
+body.dark-mode .review-text{ color:#c2969e; }
+body.dark-mode .cart-button{ background:#8c3e4d; border-color:#f5dce0; }
+body.dark-mode .cart-button:hover{ background:#a34b5c; }
+body.dark-mode .footer{ color:#bd8e97; }
+body.dark-mode .vine{ color:#8a5961; opacity:.75; text-shadow: 0 0 8px rgba(166,74,94,.18); }
+body.dark-mode .vine::before{ color:#6d3943; }
+body.dark-mode .password-overlay{ background: rgba(20,5,8,.72); }
+body.dark-mode .password-box{ background: linear-gradient(145deg, #51232c, #35151b); border-color:#8b4d59; box-shadow: 0 18px 45px rgba(0,0,0,.55), inset 0 0 0 4px rgba(255,255,255,.07); }
+body.dark-mode .password-title{ color:#f0d4d9; }
+body.dark-mode .password-lace{ color:#d99ba7; }
+body.dark-mode .password-hint{ background:#2b1116; border-color:#854552; color:#e1b5bc; }
+body.dark-mode .password-input{ background:#241014; border-color:#854552; color:#f0d4d9; }
+body.dark-mode .password-open{ background:#8b4050; border-color:#f3d9dd; }
+body.dark-mode .password-close{ background:#2b1116; border-color:#854552; color:#d5a7af; }
+
+/* =====================================================
+   ☁️ MÂY HỒNG CHÌM
+===================================================== */
+.cloud{
+    position:fixed; width:420px; height:170px; border-radius:50%;
+    background: radial-gradient(ellipse, rgba(255,255,255,.75), rgba(255,210,224,.35) 50%, transparent 75%);
+    filter:blur(25px); pointer-events:none; z-index:0; opacity:.65;
+    animation: cloudDrift 14s ease-in-out infinite;
+}
+.cloud-1{ top:270px; left:-160px; }
+.cloud-2{ top:720px; right:-170px; animation-delay:-5s; }
+.cloud-3{ top:1200px; left:-150px; animation-delay:-9s; }
+@keyframes cloudDrift{
+    0%,100%{ transform: translateX(0) scale(1); }
+    50%{ transform: translateX(75px) scale(1.08); }
+}
+
+/* =====================================================
+   🌿 DÂY LEO XANH / ĐỎ
+===================================================== */
+.vine{
+    position:absolute; pointer-events:none; z-index:8; color:var(--leaf);
+    font-size:22px; line-height:1; opacity:.65;
+    filter: drop-shadow(0 2px 2px rgba(80,100,80,.12));
+    animation: vineFloat 5s ease-in-out infinite;
+}
+.vine-left{ left:-11px; top:15px; transform: rotate(-8deg); }
+.vine-right{ right:-11px; bottom:15px; transform: rotate(172deg); animation-delay:-2.5s; }
+@keyframes vineFloat{
+    0%,100%{ transform: rotate(-8deg) translateY(0); }
+    50%{ transform: rotate(-5deg) translateY(-3px); }
+}
+
+/* =====================================================
+   🌸 CÁNH HOA BAY NHẸ
+===================================================== */
+.petals{ position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:3; }
+.petal{ position:absolute; top:-30px; color:#e8aebe; opacity:.28; font-size:13px; animation: petalFall linear infinite; }
+.petal:nth-child(1){ left:7%; animation-duration:15s; animation-delay:-5s; }
+.petal:nth-child(2){ left:19%; font-size:10px; animation-duration:18s; animation-delay:-12s; }
+.petal:nth-child(3){ left:35%; font-size:15px; animation-duration:13s; animation-delay:-3s; }
+.petal:nth-child(4){ left:52%; font-size:11px; animation-duration:17s; animation-delay:-9s; }
+.petal:nth-child(5){ left:69%; font-size:14px; animation-duration:14s; animation-delay:-7s; }
+.petal:nth-child(6){ left:84%; font-size:10px; animation-duration:19s; animation-delay:-14s; }
+.petal:nth-child(7){ left:94%; font-size:13px; animation-duration:16s; animation-delay:-2s; }
+@keyframes petalFall{
+    0%{ top:-5%; transform: translateX(0) rotate(0deg); opacity:0; }
+    15%{ opacity:.28; }
+    50%{ transform: translateX(45px) rotate(100deg); }
+    80%{ opacity:.22; }
+    100%{ top:108%; transform: translateX(-25px) rotate(220deg); opacity:0; }
+}
+
+/* =====================================================
+   🌙 MÀN TỐI
+===================================================== */
+.dark-screen{
+    position:fixed; inset:0; background: rgba(39,27,25,.95);
+    z-index:900; pointer-events:none; opacity:1; transition: opacity 1.5s ease;
+}
+.dark-screen.light-on{ opacity:0; }
+
+/* =====================================================
+   🏮 ĐÈN
+===================================================== */
+.lamp{ position:absolute; left:24px; top:0; width:105px; height:180px; cursor:pointer; z-index:1010; }
+.lamp-wire{ position:absolute; top:0; left:51px; width:3px; height:43px; background:#76574d; }
+.lamp-hook{ position:absolute; top:37px; left:37px; width:30px; height:18px; border: 3px solid #76574d; border-bottom:0; border-radius: 20px 20px 0 0; }
+.lamp-light{
+    position:absolute; left:-65px; top:20px; width:240px; height:240px; border-radius:50%;
+    background: radial-gradient(circle, rgba(255,225,160,.28), rgba(255,220,150,.12) 42%, transparent 72%);
+    filter:blur(9px); opacity:0; transition: opacity 1s ease; z-index:1;
+}
+body.light-mode .lamp-light{ opacity:1; }
+.lamp-bulb{
+    position:absolute; left:40px; top:75px; width:25px; height:32px; border-radius: 50% 50% 45% 45%;
+    background: radial-gradient(circle at 50% 45%, #fffde8 0%, #ffe7a5 45%, #eec879 100%);
+    box-shadow: 0 0 13px rgba(255,221,153,.9); z-index:2;
+}
+.lamp-shade{
+    position:absolute; left:12px; top:51px; width:80px; height:62px;
+    background: linear-gradient(145deg, #fff0d8, #d8b08c);
+    clip-path: polygon(17% 0, 83% 0, 100% 100%, 0 100%);
+    border: 2px solid #94705d; box-shadow: 0 5px 13px rgba(73,48,42,.2); z-index:4;
+}
+.lamp-trim{ position:absolute; left:10px; top:105px; width:84px; height:8px; background:#f0c8a6; border-radius:50%; z-index:5; }
+
+/* =====================================================
+   🏪 HEADER
+===================================================== */
+header{
+    position:fixed; top:0; left:0; width:100%; height:245px; z-index:1000;
+    background: linear-gradient(180deg, #ffd0dc 0%, #ffd9e2 65%, #f9e2e6 100%);
+    text-align:center; padding-top:29px; box-shadow: 0 5px 18px rgba(116,82,72,.12);
+}
+
+/* =====================================================
+   👑 TIÊU ĐỀ
+===================================================== */
+.title-area{ position:relative; display:inline-block; padding: 13px 34px 10px; }
+.title-area::before{
+    content:""; position:absolute; left:50%; top:50%; width:590px; height:105px;
+    transform: translate(-50%,-50%);
+    background: radial-gradient(ellipse, rgba(255,255,255,.72) 0%, rgba(255,226,234,.42) 48%, transparent 73%);
+    border-radius:50%; filter:blur(9px); z-index:-2;
+}
+.title-area::after{
+    content:"♡ ･ﾟ✿ﾟ･ ♡"; position:absolute; left:50%; bottom:-19px;
+    transform: translateX(-50%); width:270px; padding-bottom:7px;
+    border-bottom: 2px solid rgba(255,255,255,.78); color:#d79baa;
+    font-family: 'Comfortaa', cursive; font-size:10px; letter-spacing:5px;
+    opacity:.78; white-space:nowrap; z-index:5;
+}
+.shop-title{
+    display:inline-block; position:relative; white-space:nowrap;
+    font-family: 'Baloo 2', cursive; font-size:56px; font-weight:800;
+    letter-spacing:1px; line-height:1.15; color:#76534d;
+    text-shadow: 0 3px 0 #ffffff, 0 5px 10px rgba(126,79,76,.10); z-index:2;
+}
+.shop-title::after{
+    content:""; position:absolute; left:7%; right:7%; bottom:1px; height:13px;
+    background:#f4b9ca; border-radius:50%; opacity:.42; filter:blur(4px); z-index:-1;
+}
+.shop-title::before{
+    content:"⌒"; position:absolute; left:-30px; bottom:-12px; color:#ffffff;
+    font-size:25px; font-family:serif; opacity:.72; transform: rotate(-10deg);
+}
+.title-area .shop-title::after{
+    content:"⌒"; position:absolute; right:-30px; bottom:-12px; left:auto; width:auto;
+    height:auto; background:none; border-radius:0; filter:none; color:#ffffff;
+    font-size:25px; opacity:.72; transform: rotate(10deg);
+}
+
+/* =====================================================
+   🎀 NƠ
+===================================================== */
+.title-bow{
+    position:absolute; font-size:18px; color:#e89db1;
+    filter: drop-shadow(0 2px 2px rgba(110,70,65,.10)); opacity:.82; z-index:6;
+}
+.bow-left{ left:10px; top:-4px; animation: floatBow1 4s ease-in-out infinite; }
+.bow-right{ right:-13px; bottom:-2px; animation: floatBow2 4.5s ease-in-out infinite; }
+@keyframes floatBow1{
+    0%,100%{ transform: translate(0,0) rotate(-4deg); }
+    50%{ transform: translate(3px,-4px) rotate(4deg); }
+}
+@keyframes floatBow2{
+    0%,100%{ transform: translate(0,0) rotate(4deg); }
+    50%{ transform: translate(-3px,4px) rotate(-4deg); }
+}
+
+/* =====================================================
+   🤍 NGỌC
+===================================================== */
+.pearl{
+    position:absolute; color:#ffffff; font-size:25px; opacity:.8;
+    text-shadow: 0 1px 4px rgba(210,150,165,.25); animation: pearlFloat 4s ease-in-out infinite;
+}
+.pearl-left{ left:38px; bottom:-7px; }
+.pearl-right{ right:38px; bottom:-7px; animation-delay:-2s; }
+@keyframes pearlFloat{
+    0%,100%{ transform: translateY(0); opacity:.65; }
+    50%{ transform: translateY(-3px); opacity:.9; }
+}
+
+/* =====================================================
+   🩷 BIỂN NHỎ
+===================================================== */
+.signboard{
+    display:inline-block; position:relative; margin-top:13px; padding: 7px 30px 6px;
+    background: rgba(255,248,250,.78); border: 1.5px solid #dfacba; border-radius:25px;
+    color:#805c54; font-size:12px; font-weight:700; letter-spacing:.3px;
+    box-shadow: 0 3px 10px rgba(96,63,57,.07), inset 0 0 0 2px rgba(255,255,255,.65);
+}
+.signboard::before, .signboard::after{
+    content:""; position:absolute; top:50%; width:5px; height:5px;
+    transform: translateY(-50%); border-radius:50%; background:#e5a9b9; box-shadow: 0 0 0 2px #ffffff;
+}
+.signboard::before{ left:10px; }
+.signboard::after{ right:10px; }
+
+/* =====================================================
+   🌸 DECOR
+===================================================== */
+.title-decoration{ display:flex; justify-content:center; align-items:center; gap:13px; margin-top:9px; color:#d99aaa; font-size:11px; opacity:.68; }
+.title-decoration span{ display:inline-block; animation: tinyFloat 4s ease-in-out infinite; }
+.title-decoration span:nth-child(2){ font-size:13px; color:#e3a0b3; animation-delay:-1s; }
+.title-decoration span:nth-child(3){ animation-delay:-2s; }
+@keyframes tinyFloat{
+    0%,100%{ transform: translateY(0); }
+    50%{ transform: translateY(-3px); }
+}
+
+/* =====================================================
+   🎀 REN
+===================================================== */
+.header-lace{
+    position:absolute; left:0; bottom:0; width:100%; height:25px; overflow:hidden;
+    background: linear-gradient(to bottom, transparent 0 35%, rgba(255,255,255,.8) 36% 43%, transparent 44%);
+}
+.header-lace::before{
+    content:""; position:absolute; left:0; bottom:0; width:100%; height:17px;
+    background: radial-gradient(circle at 50% 0, #ffffff 7px, transparent 8px);
+    background-size: 24px 17px;
+}
+.header-lace::after{ content:""; position:absolute; left:0; bottom:0; width:100%; height:7px; background:#edb8c8; opacity:.8; }
+
+/* =====================================================
+   🔔 NÚT
+===================================================== */
+.header-tools{ position:absolute; right:22px; top:25px; display:flex; gap:10px; z-index:20; }
+.tool-button{
+    width:44px; height:44px; border-radius:50%; border: 2px solid rgba(255,255,255,.95);
+    background: #fff9f6; color:#76574d; display:flex; align-items:center; justify-content:center;
+    font-size:20px; cursor:pointer; box-shadow: 0 3px 9px rgba(85,57,50,.13);
+    transition: transform .25s ease, background .25s ease;
+}
+.tool-button:hover{ transform: translateY(-2px); background:#ffe9ee; }
+#bellButton.ringing{ animation: bellRing .7s ease; }
+@keyframes bellRing{
+    0%{ transform:rotate(0); }
+    20%{ transform:rotate(10deg); }
+    40%{ transform:rotate(-10deg); }
+    60%{ transform:rotate(7deg); }
+    80%{ transform:rotate(-5deg); }
+    100%{ transform:rotate(0); }
+}
+
+/* =====================================================
+   📦 NỘI DUNG
+===================================================== */
+.main-content{ position:relative; z-index:5; max-width:1050px; margin:auto; padding: 0 25px; }
+.intro{ text-align:center; margin-top:20px; margin-bottom:48px; color:#947166; font-size:28px; font-weight:700; line-height:1.5; }
+
+/* =====================================================
+   🪵 KỆ
+===================================================== */
+.shelf{
+    position:relative; margin-bottom:42px; padding: 28px 26px 30px;
+    background: linear-gradient(145deg, #cbb1a5, #b99b8e);
+    border: 3px solid #aa887b; border-radius:26px;
+    box-shadow: inset 0 0 0 3px rgba(255,255,255,.22), 0 7px 0 #9d796b, 0 14px 24px rgba(72,49,43,.13);
+}
+.shelf::before{ content:""; position:absolute; inset:6px; border: 2px solid rgba(132,164,140,.42); border-radius:21px; pointer-events:none; }
+.shelf::after{ content:""; position:absolute; inset:11px; border: 1px solid rgba(255,255,255,.2); border-radius:18px; pointer-events:none; }
+.shelf-mark{ position:absolute; top:8px; color:#ffecef; font-size:14px; }
+.shelf-mark.left{ left:15px; }
+.shelf-mark.right{ right:15px; }
+
+/* =====================================================
+   🌸 HAI Ô - ĐÃ FIX KHUNG
+===================================================== */
+.shelf-row {
+    display: flex;
+    gap: 42px;
+    align-items: stretch; /* Ép 2 ô luôn cao bằng nhau */
+}
+
+/* =====================================================
+   🩷 CARD - ĐÃ FIX KHUNG
+===================================================== */
+.bot-card {
+    position: relative;
+    width: calc(50% - 21px);
+    display: flex;
+    flex-direction: column; /* Để đẩy giỏ hàng xuống dưới cùng */
+    padding: 18px;
+    padding-bottom: 75px;
+    background: linear-gradient(145deg, #f9dce4, #f5d1db);
+    border: 3px solid #c19a8d;
+    border-radius: 24px;
+    box-shadow: inset 0 0 0 3px rgba(255,255,255,.42), 0 5px 12px rgba(83,56,49,.14);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.bot-card:hover {
+    transform: translateY(-4px);
+    box-shadow: inset 0 0 0 3px rgba(255,255,255,.5), 0 9px 18px rgba(83,56,49,.17);
+}
+
+/* =====================================================
+   🎀 NƠ CARD
+===================================================== */
+.card-bow {
+    position: absolute;
+    right: 15px;
+    top: -13px;
+    font-size: 19px;
+    animation: cardBow 4.5s ease-in-out infinite;
+}
+
+@keyframes cardBow{
+    0%,100%{ transform: rotate(-4deg); }
+    50%{ transform: rotate(4deg); }
+}
+
+/* =====================================================
+   📷 KHUNG ẢNH CỐ ĐỊNH TỈ LỆ - ĐÃ FIX
+===================================================== */
+.bot-image {
+    width: 100%;
+    height: 220px; /* Cố định luôn chiều cao để không bị ô thò ô thụt */
+    border-radius: 22px;
+    border: 2px dashed #c69c91;
+    background: #ffe8ed;
+    display: flex;
+    overflow: hidden;
+    padding: 0; /* Bỏ padding để ảnh tràn viền bo góc cho đẹp */
+}
+
+.bot-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Tự cắt cúp ảnh cho đều khung, KHÔNG BỊ MÉO */
+    border-radius: 20px;
+}
+
+.bot-name {
+    display:block;
+    margin-top:14px;
+    text-align:center;
+    color:#70534b;
+    font-family:'Comfortaa', cursive;
+    font-size:20px;
+    line-height:1.45;
+    font-weight:700;
+}
+
+/* =====================================================
+   💌 REVIEW - ĐÃ FIX
+===================================================== */
+.review {
+    display: block;
+    margin-top: 12px;
+    padding-top: 11px;
+    border-top: 2px dashed rgba(117,82,72,.25);
+    flex-grow: 1; /* Dãn nở phần review để đẩy nút giỏ hàng thẳng hàng nhau */
+}
+
+.review-title{ display:block; font-size:12px; color:#86645b; font-weight:700; }
+.review-text{ display:block; margin-top:6px; color:#8e6b62; font-size:11px; line-height:1.65; font-weight:600; }
+
+/* =====================================================
+   🛒 GIỎ HÀNG
+===================================================== */
+.cart-button{
+    position:absolute; right:17px; bottom:16px; width:49px; height:49px; border-radius:50%;
+    border: 3px solid #ffffff; background:#e7a7b9; color:#ffffff; display:flex; align-items:center;
+    justify-content:center; font-size:21px; cursor:pointer; box-shadow: 0 3px 8px rgba(92,59,53,.16);
+    transition: transform .25s ease, background .25s ease;
+}
+.cart-button:hover{ background:#dc95a9; transform: scale(1.07); }
+
+/* =====================================================
+   🌸 HOA CLICK
+===================================================== */
+.click-flower{
+    position:fixed; pointer-events:none; z-index:99999; color:#efaebe; font-size:14px; opacity:.55;
+    text-shadow: 0 0 7px rgba(255,255,255,.9); animation: clickFlower 1.4s ease-out forwards;
+}
+@keyframes clickFlower{
+    0%{ opacity:0; transform: translate(-50%,-50%) scale(.55) rotate(0deg); }
+    20%{ opacity:.55; }
+    100%{ opacity:0; transform: translate( calc(-50% + var(--move)), calc(-50% - 65px) ) scale(.9) rotate(45deg); }
+}
+
+/* =====================================================
+   🔐 PASSWORD
+===================================================== */
+.password-overlay{ display:none; position:fixed; inset:0; z-index:9990; background: rgba(55,38,35,.48); backdrop-filter: blur(5px); }
+.password-overlay.show{ display:block; }
+.password-box{
+    display:none; position:fixed; left:50%; top:50%; transform: translate(-50%,-50%); width:420px; max-width:90%;
+    padding: 32px 28px 29px; z-index:9995; text-align:center; background: linear-gradient(145deg, #ffdce5, #f5ccd7);
+    border: 3px solid #c2949f; border-radius:27px; box-shadow: 0 18px 45px rgba(57,39,35,.3), inset 0 0 0 4px rgba(255,255,255,.45);
+}
+.password-box.show{ display:block; animation: passwordPop .3s ease; }
+@keyframes passwordPop{
+    from{ opacity:0; transform: translate(-50%,-47%) scale(.94); }
+    to{ opacity:1; transform: translate(-50%,-50%) scale(1); }
+}
+.password-bow{ display:block; margin-top:-52px; font-size:32px; }
+.password-lace{ display:block; margin-top:4px; color:#ffffff; letter-spacing:5px; font-size:12px; }
+.password-title{ display:block; margin-top:9px; color:#704f48; font-size:23px; font-weight:700; }
+.password-hint{ display:block; margin-top:15px; padding:14px 16px; background:#fff4f7; border: 2px dashed #d09aaa; border-radius:16px; color:#806057; font-size:14px; line-height:1.7; font-weight:700; }
+.password-input{
+    display:block; width:100%; margin-top:15px; padding:14px 12px; background:#fffafb; border: 2px solid #d09aaa;
+    border-radius:15px; outline:none; text-align:center; color:#70534b; font-family: 'Comfortaa', cursive; font-size:15px; font-weight:700;
+}
+.password-input::placeholder{ color:#a9857e; font-size:13px; }
+.password-open, .password-close{ margin-top:14px; padding: 11px 23px; border-radius:22px; font-family: 'Comfortaa', cursive; font-size:13px; font-weight:700; cursor:pointer; }
+.password-open{ border: 2px solid #ffffff; background:#d99bab; color:#ffffff; }
+.password-close{ margin-left:5px; border: 2px solid #d09aaa; background:#fff5f7; color:#806158; }
+
+/* =====================================================
+   🌷 FOOTER
+===================================================== */
+.footer{ text-align:center; color:#927166; font-size:12px; font-weight:700; margin-top:15px; }
+
+/* =====================================================
+   📱 MOBILE - ĐÃ CĂN CHỈNH LẠI GỌN GÀNG
+===================================================== */
+@media(max-width:650px){
+    body {
+        padding-top: 240px;
+    }
+
+    header {
+        height: 230px;
+        padding-top: 65px; /* Đẩy tiêu đề xuống dưới để không đè vào Nút & Đèn */
+    }
+
+    .shop-title {
+        font-size: 27px; /* Thu nhỏ chữ lại một chút cho vừa màn hình */
+        letter-spacing: .5px;
+    }
+
+    .title-area {
+        padding: 13px 10px 10px;
+    }
+
+    .title-area::before { width: 90%; height: 90px; }
+    .title-area::after { bottom: -18px; width: 210px; font-size: 8px; letter-spacing: 2px; }
+
+    .shop-title::before { left: -15px; bottom: -5px; font-size: 16px; }
+    .title-area .shop-title::after { right: -15px; bottom: -5px; font-size: 16px; }
+
+    .bow-left { left: 0px; top: -3px; }
+    .bow-right { right: -4px; bottom: -1px; }
+
+    .lamp {
+        left: 0;
+        transform: scale(.55); /* Thu nhỏ đèn hơn nữa trên điện thoại */
+        transform-origin: top left;
+    }
+
+    .header-tools {
+        right: 10px;
+        top: 15px; /* Đẩy nút lên cao xíu */
+        gap: 6px;
+    }
+
+    .tool-button { width: 36px; height: 36px; font-size: 16px; }
+    .header-lace { height: 21px; }
+    .main-content { padding: 0 10px; }
+    .intro { margin-top: 10px; margin-bottom: 25px; font-size: 16px; }
+    .shelf { padding: 20px 10px 20px; border-radius: 20px; }
+
+    /* Chỉnh thẻ Card trên Mobile */
+    .shelf-row { gap: 10px; }
+    .bot-card {
+        width: calc(50% - 5px);
+        padding: 10px;
+        padding-bottom: 55px;
+        border-radius: 18px;
+    }
+
+    /* Khung ảnh Mobile (cố định để không lệch) */
+    .bot-image {
+        height: 150px;
+        border-radius: 16px;
+    }
+    
+    .bot-image img { border-radius: 14px; }
+    .bot-name { font-size: 14px; margin-top: 8px; }
+    .review { margin-top: 8px; padding-top: 8px; }
+    .review-title { font-size: 10px; }
+    .review-text { font-size: 10px; margin-top: 4px; }
+
+    .cart-button {
+        right: 8px; bottom: 8px;
+        width: 36px; height: 36px; font-size: 15px;
+    }
+
+    .title-decoration { gap: 9px; margin-top: 7px; font-size: 9px; }
+    .signboard { margin-top: 15px; padding: 6px 20px; font-size: 10px; }
+    
+    .vine { font-size: 17px; }
+    .vine-left { left: -8px; }
+    .vine-right { right: -8px; }
+
+    /* Form Password Mobile */
+    .password-box { width: calc(100% - 30px); padding: 25px 15px; }
+    .password-title { font-size: 19px; }
+    .password-hint { font-size: 13px; padding: 10px; }
+    .password-input { font-size: 14px; padding: 12px 10px; }
+    .password-open, .password-close { font-size: 12px; padding: 10px 15px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- 🌙 MÀN TỐI -->
+<span class="dark-screen" id="darkScreen"></span>
+
+<!-- ☁️ MÂY -->
+<span class="cloud cloud-1"></span>
+<span class="cloud cloud-2"></span>
+<span class="cloud cloud-3"></span>
+
+<!-- 🌸 CÁNH HOA -->
+<span class="petals">
+    <span class="petal">🌸</span>
+    <span class="petal">✿</span>
+    <span class="petal">❀</span>
+    <span class="petal">🌷</span>
+    <span class="petal">✿</span>
+    <span class="petal">🌸</span>
+    <span class="petal">❀</span>
+</span>
+
+<!-- =====================================================
+     🏪 HEADER
+===================================================== -->
+<header>
+
+<!-- 🏮 ĐÈN -->
+<span class="lamp" onclick="toggleLight()">
+    <span class="lamp-wire"></span>
+    <span class="lamp-hook"></span>
+    <span class="lamp-light"></span>
+    <span class="lamp-bulb"></span>
+    <span class="lamp-shade"></span>
+    <span class="lamp-trim"></span>
+</span>
+
+<!-- 🔔 + 🌙 -->
+<span class="header-tools">
+    <span class="tool-button" id="bellButton" onclick="ringBell()">🔔</span>
+    <span class="tool-button" id="themeButton" onclick="toggleTheme()">🌙</span>
+</span>
+
+<!-- 🎀 TÊN TIỆM -->
+<span class="title-area">
+    <span class="title-cloud"></span>
+    <span class="title-bow bow-left">🎀</span>
+    <span class="title-bow bow-right">🎀</span>
+    <span class="shop-title">Cái Tiệm Tạp Hoá</span>
+    <span class="pearl pearl-left">·</span>
+    <span class="pearl pearl-right">·</span>
+</span>
+
+<br>
+
+<!-- 🩷 BIỂN -->
+<span class="signboard">♡ Tiệm nhỏ xin chào ♡</span>
+
+<!-- 🌸 DECOR -->
+<span class="title-decoration">
+    <span>✿</span>
+    <span>♡</span>
+    <span>✿</span>
+</span>
+<span class="header-lace"></span>
+</header>
+
+<!-- =====================================================
+     📦 NỘI DUNG
+===================================================== -->
+<main class="main-content">
+<p class="intro">✿ Mọi người ấn vào giỏ hàng nhé ✿</p>
+
+<!-- =====================================================
+     🪵 KỆ 1
+===================================================== -->
+<section class="shelf">
+<span class="vine vine-left">🌿</span>
+<span class="vine vine-right">🍃</span>
+<span class="shelf-mark left">✿</span>
+<span class="shelf-mark right">✿</span>
+<span class="shelf-row">
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="ruslan.jpg" alt="Ruslan Roronov"></span>
+<span class="bot-name">Ruslan Roronov</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">Phụ nữ rất iu, tinh hoa hội tụ</span>
+</span>
+<button class="cart-button" onclick="openPassword('https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221tzGl0dAgwqOFtx96GZM77T6xliagwX-F%22%5D,%22action%22:%22open%22,%22userId%22:%22112664116711179758789%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing', '69', '60+9=?♡')">🛒</button>
+</article>
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="phong.jpg"></span>
+<span class="bot-name">Hoàng Thiên Phong</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">CÓ YẾU TỐ GÂY KHÓ CHỊU, CÂN NHẮC TRƯỚC KHI CHƠI<br>Tinh hoa hội tụ, phụ nữ không nên yêu</span>
+</span>
+<button class="cart-button" onclick="openPassword('https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221jq8e7QAy1PIDh3MACdbajNBgpWhKsffc%22%5D,%22action%22:%22open%22,%22userId%22:%22112664116711179758789%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing', '10', 'người bình thường một ngày ăn Y bữa, em bé 4 tháng tuổi 1 ngày trung bình ăn X bữa. Hỏi X+Y=?')">🛒</button>
+</article>
+</span>
+</section>
+
+<!-- =====================================================
+     🪵 KỆ 2
+===================================================== -->
+<section class="shelf">
+<span class="vine vine-left">🌿</span>
+<span class="vine vine-right">🍃</span>
+<span class="shelf-mark left">✿</span>
+<span class="shelf-mark right">✿</span>
+<span class="shelf-row">
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="hung.jpg"></span>
+<span class="bot-name">Hoàng Thiên Hùng</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">CÓ YẾU TỐ NHẠY CẢM, BẠO LỰC, CÂN NHẮC TRƯỚC KHI CHƠI<br>Tay chân hội tụ, phụ nữ yêu là bầm mặt</span>
+</span>
+<button class="cart-button" onclick="openPassword('https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221YhE0ifTGh7BsF9AG-pI6TSrDR2CLLjiN%22%5D,%22action%22:%22open%22,%22userId%22:%22112664116711179758789%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing', '2', '2X-5=-1. X=?')">🛒</button>
+</article>
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="jin.jpg"></span>
+<span class="bot-name">Kisaragi Jin</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">Em bé rất iu, cục cưng của tui</span>
+</span>
+<button class="cart-button" onclick="openPassword('https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221hSRl7Ea1cPwLPau1HMAQAnUvC2IBAMBD%22%5D,%22action%22:%22open%22,%22userId%22:%22103806596002072742519%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing', '17', '8x2+1=?')">🛒</button>
+</article>
+</span>
+</section>
+
+<!-- =====================================================
+     🪵 KỆ 3
+===================================================== -->
+<section class="shelf">
+<span class="vine vine-left">🌿</span>
+<span class="vine vine-right">🍃</span>
+<span class="shelf-mark left">✿</span>
+<span class="shelf-mark right">✿</span>
+<span class="shelf-row">
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="crw.jpg"></span>
+<span class="bot-name">Mr. Crawling</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">Từ Game Homicipher. Cún con bám người</span>
+</span>
+<button class="cart-button" onclick="openPassword('https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221eMRNHdw27m204IGJqAByIsfskMNd1CoA%22%5D,%22action%22:%22open%22,%22userId%22:%22103806596002072742519%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing', '3', '2+1=?')">🛒</button>
+</article>
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="si.jpg"></span>
+<span class="bot-name">Mr. Silvair</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">Từ game Homicipher. Bác sĩ dị giới</span>
+</span>
+<button class="cart-button" onclick="openPassword('https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%2218LaFY4YJo-gHBlHB113gVd3CYW_LOB2l%22%5D,%22action%22:%22open%22,%22userId%22:%22103806596002072742519%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing', '67', '60+7')">🛒</button>
+</article>
+</span>
+</section>
+
+<!-- =====================================================
+     🪵 KỆ 4
+===================================================== -->
+<section class="shelf">
+<span class="vine vine-left">🌿</span>
+<span class="vine vine-right">🍃</span>
+<span class="shelf-mark left">✿</span>
+<span class="shelf-mark right">✿</span>
+<span class="shelf-row">
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="ka.jpg"></span>
+<span class="bot-name">Hoàng Thế Khang</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">Dầm và gia. Thích gặm cỏ non</span>
+</span>
+<button class="cart-button" onclick="openPassword('https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221zmxGEgYopWSRsqz8VCqjVImUNKFIIIj6%22%5D,%22action%22:%22open%22,%22userId%22:%22112664116711179758789%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing', '38', '67-37+8=?')">🛒</button>
+</article>
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="tu.jpg"></span>
+<span class="bot-name">Hoàng Duy Từ</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">Bái tre mỏ hỗn, lì như trâu<br>Nhớ chuẩn bị khăn giấy</span>
+</span>
+<button class="cart-button" onclick="openPassword('https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221RMyVSowtKWrMFn4YUZxnS-ZWg2KAQiN_%22%5D,%22action%22:%22open%22,%22userId%22:%22112664116711179758789%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing', '44', '40+4=?')">🛒</button>
+</article>
+</span>
+</section>
+
+<!-- =====================================================
+     🪵 KỆ 5
+===================================================== -->
+<section class="shelf">
+<span class="vine vine-left">🌿</span>
+<span class="vine vine-right">🍃</span>
+<span class="shelf-mark left">✿</span>
+<span class="shelf-mark right">✿</span>
+<span class="shelf-row">
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="an.jpg"></span>
+<span class="bot-name">Hoàng Dực Ân</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">ĐƯỜNG BỂ TÌNH</span>
+</span>
+<button class="cart-button" onclick="openPassword('https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221yJDLTLyp2OoKEBCu8SMgB1n8CJTq_ehM%22%5D,%22action%22:%22open%22,%22userId%22:%22112664116711179758789%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing', '3000', '3x1000=?')">🛒</button>
+</article>
+
+<article class="bot-card">
+<span class="card-bow">🎀</span>
+<span class="bot-image"><img src="ba.jpg"></span>
+<span class="bot-name">Hoàng Bách Nhật</span>
+<span class="review">
+<span class="review-title">💌 Review</span>
+<span class="review-text">Đấm nhau với mộng chè. COMING SOON</span>
+</span>
+<button class="cart-button" onclick="openPassword('LINK-BOT-10', 'PASS10', 'Chưa có link nhé ♡')">🛒</button>
+</article>
+</span>
+</section>
+
+<p class="footer">✿ Cảm ơn cậu đã ghé tiệm nhỏ ♡ ✿</p>
+</main>
+
+<!-- =====================================================
+     🔐 PASSWORD POPUP
+===================================================== -->
+<span class="password-overlay" id="passwordOverlay" onclick="closePassword()"></span>
+<section class="password-box" id="passwordBox">
+<span class="password-bow">🎀</span>
+<span class="password-lace">♡ ✿ ♡ ✿ ♡</span>
+<span class="password-title">🔐 Mở ngăn kéo nhỏ</span>
+<span class="password-hint" id="passwordHint">Gợi ý mật khẩu ♡</span>
+<input type="password" id="passwordInput" class="password-input" placeholder="Nhập mật khẩu...">
+<button class="password-open" onclick="checkPassword()">Mở cửa ♡</button>
+<button class="password-close" onclick="closePassword()">Đóng</button>
+</section>
+
+<script>
+/* =====================================================
+   🏮 BẬT / TẮT ĐÈN
+===================================================== */
+function toggleLight(){
+    document.body.classList.toggle("light-mode");
+    document.getElementById("darkScreen").classList.toggle("light-on");
+}
+
+/* =====================================================
+   🌙 ĐỔI TONE
+===================================================== */
+function toggleTheme(){
+    document.body.classList.toggle("dark-mode");
+    const themeButton = document.getElementById("themeButton");
+    if(document.body.classList.contains("dark-mode")){
+        themeButton.innerHTML = "🌸";
+    }else{
+        themeButton.innerHTML = "🌙";
+    }
+}
+
+/* =====================================================
+   🌸 HOA KHI CLICK
+===================================================== */
+document.addEventListener("click", function(event){
+    if(event.target.closest(".cart-button")){ return; }
+    const flowers = ["🌸", "✿", "❀"];
+    const flower = document.createElement("span");
+    flower.className = "click-flower";
+    flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+    flower.style.left = event.clientX + "px";
+    flower.style.top = event.clientY + "px";
+    flower.style.setProperty("--move", (Math.random() * 55 - 27) + "px");
+    document.body.appendChild(flower);
+    setTimeout(function(){ flower.remove(); }, 1400);
+});
+
+/* =====================================================
+   🔔 CHUÔNG
+===================================================== */
+function ringBell(){
+    const bell = document.getElementById("bellButton");
+    bell.classList.remove("ringing");
+    void bell.offsetWidth;
+    bell.classList.add("ringing");
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if(!AudioContext){ return; }
+    const audio = new AudioContext();
+    function ting(time, frequency){
+        const oscillator = audio.createOscillator();
+        const gain = audio.createGain();
+        oscillator.type = "sine";
+        oscillator.frequency.value = frequency;
+        gain.gain.setValueAtTime(.0001, time);
+        gain.gain.exponentialRampToValueAtTime(.12, time + .02);
+        gain.gain.exponentialRampToValueAtTime(.0001, time + .5);
+        oscillator.connect(gain);
+        gain.connect(audio.destination);
+        oscillator.start(time);
+        oscillator.stop(time + .55);
+    }
+    const now = audio.currentTime;
+    ting(now, 1046);
+    ting(now + .30, 1318);
+    setTimeout(function(){ audio.close(); }, 1100);
+}
+
+/* =====================================================
+   🔐 PASSWORD
+===================================================== */
+let selectedLink = "";
+let selectedPassword = "";
+
+function openPassword(link, password, hint){
+    selectedLink = link;
+    selectedPassword = password;
+    document.getElementById("passwordHint").innerHTML = hint;
+    document.getElementById("passwordOverlay").classList.add("show");
+    document.getElementById("passwordBox").classList.add("show");
+    document.getElementById("passwordInput").value = "";
+    document.getElementById("passwordInput").focus();
+}
+
+function checkPassword(){
+    const input = document.getElementById("passwordInput").value;
+    if(input === selectedPassword){
+        window.location.href = selectedLink;
+    }else{
+        alert("Huhu, mật khẩu chưa đúng rồi 🎀");
+    }
+}
+
+function closePassword(){
+    document.getElementById("passwordOverlay").classList.remove("show");
+    document.getElementById("passwordBox").classList.remove("show");
+}
+
+/* =====================================================
+   ⌨️ ENTER = MỞ
+===================================================== */
+document.getElementById("passwordInput").addEventListener("keydown", function(event){
+    if(event.key === "Enter"){ checkPassword(); }
+});
+</script>
+
+</body>
+</html>
